@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: circleci/node
       - image: postgres:9.6.2-alpine
-          auth:
-            username: mydockerhub-user
-            password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-          environment:
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        environment:
             POSTGRES_USER: your_postgres_user
             POSTGRES_DB: your_postgres_test
     steps:
